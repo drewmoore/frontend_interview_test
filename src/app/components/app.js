@@ -5,11 +5,10 @@ import '../style.scss';
 const App = () => (
   <div className="container-fluid">
     <div className="row">
-      <div className="col-xs-2" />
-      <div className="col-xs-8">
+      <div className="col-md-2" />
+      <div className="col-xs-12 col-md-8">
         <AdvertisementsList />
       </div>
-      <div className="col-xs-2" />
     </div>
   </div>
 );

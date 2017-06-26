@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../../images/advertisement.jpg';
 
 const AdvertisementItem = () => (
-  <article className="col-xs-4 extra-padding" itemScope itemType="http://schema.org/Accommodation">
+  <article className="col-xs-12 col-lg-4 extra-padding" itemScope itemType="http://schema.org/Accommodation">
     <div className="gray-border">
       <div className="relative" itemProp="photo" itemScope itemType="http://schema.org/ImageObject">
         <img src={image} className="advertisement-banner" alt="Wohnung Foto" itemProp="contentUrl" />
@@ -17,10 +17,10 @@ const AdvertisementItem = () => (
             35764 Sinn / Fleisbach
           </address>
           <div className="row advertisement-footer extra-vertical-padding">
-            <div className="col-xs-4">
+            <div className="col-xs-12 col-sm-4">
               <strong>1.954 €</strong>
             </div>
-            <div className="col-xs-8 text-right">
+            <div className="col-xs-12 col-sm-8 text-right">
               <ul className="advertisement-extras list-unstyled list-inline">
                 <li itemProp="numberOfRooms" itemScope itemType="http://schema.org/QuantitativeValue">
                   <span className="hidden" itemProp="unitText">ROM</span>

@@ -2,6 +2,7 @@ $gray-semi-light: lighten($gray-base, 75.7%);
 
 .advertisement-banner {
   max-width: 100%;
+  min-width: 100%;
 }
 
 .advertisement-extras {
@@ -35,6 +36,9 @@ $gray-semi-light: lighten($gray-base, 75.7%);
   color:       $gray-semi-light;
   font-weight: 600;
   padding-top: 0.5em;
+  @media (max-width: $screen-sm-max) {
+    font-size: 1.25em;
+  }
 }
 
 .extra-padding {
