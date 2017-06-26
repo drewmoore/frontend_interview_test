@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './index.js',
+  entry: ['bootstrap-loader', './index.js'],
   output: {
     filename: './bundle.js',
     path: path.join(__dirname, 'dist'),
@@ -18,6 +18,26 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader'],
       },
+      {
+        test: /bootstrap-sass\/assets\/javascripts\//,
+        use: 'imports-loader?jQuery=jquery'
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'url-loader?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'file-loader'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        use: 'url-loader?limit=10000&mimetype=image/svg+xml'
+      }
     ],
   },
   plugins: [
