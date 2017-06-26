@@ -39,6 +39,7 @@
     "redux": "^3.7.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
+    "sass-resources-loader": "^1.2.1",
     "url-loader": "^0.5.9"
   }
 }

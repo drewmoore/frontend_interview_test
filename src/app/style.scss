@@ -1,0 +1,55 @@
+$gray-semi-light: lighten($gray-base, 75.7%);
+
+.advertisement-banner {
+  max-width: 100%;
+}
+
+.advertisement-extras {
+  color: $gray-light;
+  li {
+    border-right: 1px solid;
+    padding:      0px 0.75em;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.advertisement-footer {
+  font-size: 1.2em;
+}
+
+.advertisement-heading {
+  font-weight: 600;
+}
+
+.advertisement-link {
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+  color:    $gray-semi-light;
+  left:     1.5em;
+  position: absolute;
+  top:      1.5em;
+}
+
+.advertisement-location {
+  color:       $gray-semi-light;
+  font-weight: 600;
+  padding-top: 0.5em;
+}
+
+.extra-padding {
+  padding: 1.5em;
+}
+
+.extra-vertical-padding {
+  padding-bottom: 1.5em;
+  padding-top:    1.5em;
+}
+
+.gray-border {
+  border: 1px solid $gray-semi-light;
+}
+
+.relative {
+  position: relative;
+}

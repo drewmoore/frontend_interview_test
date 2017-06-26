@@ -19,6 +19,31 @@ module.exports = {
         use: ['style-loader'],
       },
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              // Make available bootstrap's variables:
+              resources: './node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './images/[name].[hash].[ext]',
+          }
+        }
+      },
+      {
+        // Make jquery available to bootstrap:
         test: /bootstrap-sass\/assets\/javascripts\//,
         use: 'imports-loader?jQuery=jquery'
       },
@@ -33,10 +58,6 @@ module.exports = {
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
         use: 'file-loader'
-      },
-      {
-        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        use: 'url-loader?limit=10000&mimetype=image/svg+xml'
       }
     ],
   },
