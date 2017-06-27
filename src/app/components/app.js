@@ -1,5 +1,5 @@
 import React from 'react';
-import AdvertisementsList from './advertisements/List.js';
+import AdvertisementsListContainer from '../containers/advertisements/List.js';
 import '../style.scss';
 
 const App = () => (
@@ -7,7 +7,7 @@ const App = () => (
     <div className="row">
       <div className="col-md-2" />
       <div className="col-xs-12 col-md-8">
-        <AdvertisementsList />
+        <AdvertisementsListContainer />
       </div>
     </div>
   </div>

@@ -1699,6 +1699,10 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
 
+es6-promise@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.1.0.tgz#dda03ca8f9f89bc597e689842929de7ba8cebdf0"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -2441,6 +2445,12 @@ ignore@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.3.tgz#432352e57accd87ab3110e82d3fea0e47812156d"
 
+immutability-helper@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/immutability-helper/-/immutability-helper-2.2.2.tgz#e7e9da728b3de2fad34a216f4157b326dbccc892"
+  dependencies:
+    invariant "^2.2.0"
+
 imports-loader@^0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/imports-loader/-/imports-loader-0.7.1.tgz#f204b5f34702a32c1db7d48d89d5e867a0441253"
@@ -2727,7 +2737,7 @@ isobject@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.0.tgz#39565217f3661789e8a0a0c080d5f7e6bc46e1a0"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -4120,6 +4130,10 @@ redux-devtools@^3.4.0:
     lodash "^4.2.0"
     prop-types "^15.5.7"
     redux-devtools-instrument "^1.0.1"
+
+redux-thunk@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
 
 redux@^3.7.0:
   version "3.7.0"

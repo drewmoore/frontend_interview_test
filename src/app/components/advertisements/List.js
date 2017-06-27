@@ -1,12 +1,30 @@
-import React from 'react';
-import AdvertisementItem from './Item.js';
+import React, { Component }       from 'react';
+import AdvertisementItemContainer from '../../containers/advertisements/Item.js';
 
-const AdvertisementsList = () => (
-  <div className="row">
-    <AdvertisementItem />
-    <AdvertisementItem />
-    <AdvertisementItem />
-  </div>
-);
+export default class AdvertisementsList extends Component {
+  render() {
+    return (
+      <div className="row">
+        {this.props.isFetching &&
+          <div className="col-xs-12 text-center well well-lg">
+            <span>Biete Warten Sie als wir Immobilien Finden ...</span>
+          </div>
+        }
+        {!!this.props.error &&
+          <div className="col-xs-12">
+            <strong className="alert">{this.props.error}</strong>
+          </div>
+        }
+        {this.props.advertisements.map(advertisement => (
+          <AdvertisementItemContainer key={advertisement.id} {...advertisement} />
+        ))}
+      </div>
+    )
+  }
 
-export default AdvertisementsList;
+  componentWillMount() {
+    if (!this.props.advertisements.length && !this.props.isFetching) {
+      this.props.fetchAdvertisements();
+    }
+  }
+}

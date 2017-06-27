@@ -64,4 +64,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html' })
   ],
+  devServer: {
+    proxy: {
+      '/advertisements': {
+        target:       'https://api.mcmakler.de/v1',
+        changeOrigin: true
+      }
+    }
+  }
 };
