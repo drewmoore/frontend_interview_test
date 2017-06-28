@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     banner,
     // Determine whether the property is for sale or for lease.
+    // I was not entirely certain on the criteria for these, so I guessed.
     purpose:       ownProps.purpose > 0 ? 'Kaufen' : 'Mieten',
     postalCode:    ownProps.realestateSummary.address.postalCode,
     city:          ownProps.realestateSummary.address.city,

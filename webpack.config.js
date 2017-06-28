@@ -65,6 +65,7 @@ module.exports = {
     new HtmlWebpackPlugin({ template: './src/index.html' })
   ],
   devServer: {
+    // Request the API through webpack's dev server, serve to frontend.
     proxy: {
       '/advertisements': {
         target:       'https://api.mcmakler.de/v1',
