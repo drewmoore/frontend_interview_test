@@ -27,9 +27,7 @@
     "sinon": "^2.3.5",
     "style-loader": "^0.18.2",
     "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^2.4.5",
     "babel-preset-react": "^6.24.1",
     "bootstrap-loader": "^2.1.0",
     "bootstrap-sass": "^3.3.7",
