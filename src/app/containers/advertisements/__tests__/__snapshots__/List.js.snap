@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdvertisementsListContainer DOM Snapshot matches snapshot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-xs-12 text-center well well-lg"
+  >
+    <span>
+      Biete Warten Sie als wir Immobilien Finden ...
+    </span>
+  </div>
+</div>
+`;

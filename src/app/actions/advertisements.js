@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import RequestHelper from '../helpers/request';
 
 export default class AdvertisementsActions {
   static get FETCH_ADVERTISEMENTS() { return 'FETCH_ADVERTISEMENTS'; }
@@ -9,8 +9,8 @@ export default class AdvertisementsActions {
     return (dispatch) => {
       dispatch(action);
       // TODO: replace with current host and port if in production
-      return fetch('//localhost:8080/advertisements')
-        .then(response => { return response.json(); })
+      return RequestHelper.fetch('//localhost:8080/advertisements')
+        .then(response => response.json())
         .then(json => dispatch(self.receiveAdvertisements(json)))
         .catch(error => dispatch(self.receiveAdvertisements({ error })));
     };
